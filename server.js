@@ -3,7 +3,7 @@ const app = express();
 const { body, validationResult } = require("express-validator");
 const cors = require("cors");
 const nodemailer = require('nodemailer');
-const port = 3001;
+const port = process.env.PORT;
 require('dotenv').config();
 app.use(cors());
 app.use(express.json());
