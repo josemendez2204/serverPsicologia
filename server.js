@@ -10,7 +10,9 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
-app.use(cors());
+app.use(cors(
+  {origin: "https://psicologia-delta.vercel.app/"}
+));
 app.use(express.json());
 
 app.post(
