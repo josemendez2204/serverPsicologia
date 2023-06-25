@@ -5,7 +5,7 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const port = 3001;
 require("dotenv").config();
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 app.post(
