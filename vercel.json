@@ -1,5 +1,12 @@
 {
   "version": 2,
-  "builds": [{ "src": "*.js", "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "/" }]
+  "routes": [
+    {
+      "src": "/contacto",
+      "methods": ["POST"],
+      "dest": "server.js"
+    }
+  ],
+  "rewrites": []
 }
+
