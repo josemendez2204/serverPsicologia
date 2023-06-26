@@ -1,12 +1,8 @@
 {
-  "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/contacto",
-      "methods": ["POST"],
-      "dest": "server.js"
+      "source": "/(.*)",
+      "destination": "/api"
     }
-  ],
-  "rewrites": []
+  ]
 }
-

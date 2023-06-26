@@ -5,18 +5,16 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const port = 3001;
 require("dotenv").config();
-// Set the CORS header
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  next();
-});
-app.use(cors(
-  {origin: "https://psicologia-delta.vercel.app/"}
-));
+
+app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.redirect("/api");
+});
+
 app.post(
-  "/contacto",
+  "api/contacto",
   [
     body("firstName").notEmpty().isString(),
     body("lastName").notEmpty().isString(),
