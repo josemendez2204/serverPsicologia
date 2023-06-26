@@ -9,12 +9,10 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.redirect("/api");
-});
+
 
 app.post(
-  "api/contacto",
+  "/contacto",
   [
     body("firstName").notEmpty().isString(),
     body("lastName").notEmpty().isString(),
