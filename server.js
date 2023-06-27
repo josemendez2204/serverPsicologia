@@ -9,7 +9,9 @@ require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 
-
+app.get('/prueba', (req, res) => {
+  res.send('¡Hola, mundo!');
+});
 
 app.post(
   "/contacto",
