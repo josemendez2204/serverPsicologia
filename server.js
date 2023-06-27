@@ -38,7 +38,7 @@ app.post(
 
     let mailDetails = {
       from: `${email}`,
-      to: "psic.andreacstantinoweb@gmail.com",
+      to: "psic.andreacstantino@gmail.com",
       subject: `${firstName} ${lastName}`,
       text: `${tel} ${message}`,
     };
